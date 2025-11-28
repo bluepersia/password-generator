@@ -17,7 +17,7 @@
   </head>
   <body>
     <main>
-      <section class="password-generator">
+      <section class="password-generator" data-password-generator>
         <div class="password-generator__content">
           <h1 class="password-generator__title">
             Generate a
@@ -26,7 +26,31 @@
           <p class="password-generator__body">
             Never use an insecure password again.
           </p>
-          <form class="password-generator__form">
+          <form class="password-generator__form" data-form>
+            <label for="length">Length</label>
+            <input
+              id="length"
+              type="number"
+              class="password-generator__input"
+              data-length
+              min="8"
+              max="20"
+              value="15"
+            />
+            <label for="numbers">Include Numbers</label>
+            <input
+              id="numbers"
+              type="checkbox"
+              class="password-generator__checkbox"
+              data-numbers
+            />
+            <label for="symbols">Include Symbols</label>
+            <input
+              id="symbols"
+              type="checkbox"
+              class="password-generator__checkbox"
+              data-symbols
+            />
             <button class="password-generator__button">
               Generate Password
             </button>
@@ -38,14 +62,15 @@
           </h2>
           <ul class="generated-passwords__list">
             <li class="generated-passwords__item">
-              <span class="generated-passwords__value"></span>
+              <span class="generated-passwords__value" data-password-1></span>
             </li>
             <li class="generated-passwords__item">
-              <span class="generated-passwords__value"></span>
+              <span class="generated-passwords__value" data-password-2></span>
             </li>
           </ul>
         </div>
       </section>
     </main>
+    <script src="js/index.js"></script>
   </body>
 </html>
