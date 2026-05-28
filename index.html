@@ -19,10 +19,60 @@
     <link rel="stylesheet" href="./src/css/utilities.css" />
 
     <!-- Blocks -->
+    <link rel="stylesheet" href="./src/css/blocks/pass-gen/pass-gen.css" />
   </head>
 
   <body>
-    <h1>Hello World</h1>
-    <p>Some lorem ipsum</p>
+    <h1 class="sr-only">Password Generator</h1>
+    <section class="pass-gen" id="pass-gen">
+      <div class="pass-gen__header">
+        <h2 class="pass-gen__title">
+          Generate a <br /><span class="pass-gen__highlight"
+            >random password</span
+          >
+        </h2>
+        <p class="pass-gen__desc">Never use an insecure password again.</p>
+        <form data-form>
+          <label for="pass-length" class="pass-gen__label"
+            >Password Length</label
+          >
+          <input
+            type="number"
+            id="pass-length"
+            placeholder="15"
+            value="15"
+            class="pass-gen__input"
+            name="pass-length"
+          />
+          <label for="use-numbers" class="pass-gen__label">Use Numbers</label>
+          <input
+            type="checkbox"
+            id="use-numbers"
+            checked="true"
+            class="pass-gen__checkbox"
+            name="use-numbers"
+          />
+          <label for="use-symbols" class="pass-gen__label">Use Symbols</label>
+          <input
+            type="checkbox"
+            id="use-symbols"
+            checked="true"
+            class="pass-gen__checkbox"
+            name="use-symbols"
+          />
+          <button class="pass-gen__btn">Generate passwords</button>
+        </form>
+      </div>
+      <ul
+        class="pass-gen__output reset-list"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <li class="pass-gen__password" data-password-1></li>
+        <li class="pass-gen__password" data-password-2></li>
+      </ul>
+    </section>
+
+    <script src="./dist/scripts/index.js" type="module"></script>
   </body>
 </html>

@@ -1,3 +1,3 @@
-const message = "Hello World";
+import PassGen from "./components/PassGen/PassGen.js";
 
-console.log(message);
+PassGen(document.getElementById("pass-gen")!);
