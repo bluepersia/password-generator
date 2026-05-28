@@ -18,3 +18,17 @@ h5,
 h6 {
   font-family: var(--font-karla);
 }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  display: block;
+}
