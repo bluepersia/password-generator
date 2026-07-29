@@ -1,14 +1,13 @@
+import tseslint from "typescript-eslint";
 import globals from "globals";
 
 export default [
+  ...tseslint.configs.recommended,
   {
-    files: ["**/*.js"],
+    files: ["**/*.ts"],
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
       globals: {
-        ...globals.browser, // window, document, etc.
-        ...globals.node, // process, __dirname, etc.
+        ...globals.node,
       },
     },
     rules: {
@@ -54,9 +53,9 @@ export default [
       "@typescript-eslint/array-type": ["warn", { default: "array-simple" }],
 
       /**
-        
-        - --- Safety & Clarity ---
-        - */
+    
+    - --- Safety & Clarity ---
+    - */
 
       // Prevent using "any" casually
 
@@ -73,7 +72,6 @@ export default [
 
         { argsIgnorePattern: "^_" },
       ],
-      "no-console": "off",
     },
   },
 ];
