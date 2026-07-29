@@ -1,0 +1,65 @@
+.pass-gen {
+  background-color: var(--color-very-dark-blue);
+  color: var(--color-white);
+  padding: 7.1rem 3.25rem;
+}
+
+.pass-gen__header {
+  border-bottom: solid 1px #2f3e53;
+  padding-bottom: 2.18rem;
+}
+
+.pass-gen__title {
+  margin-bottom: 0.625rem;
+}
+
+.pass-gen__highlight {
+  color: var(--color-green);
+}
+
+.pass-gen__desc {
+  color: var(--color-light-gray-blue);
+  margin-bottom: 3.18rem;
+}
+
+.pass-gen__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.pass-gen__btn {
+  background-color: var(--color-dark-green);
+  font-weight: var(--font-weight-200);
+  padding: 0.56em 0.93em;
+  border-radius: var(--radius-100);
+  transition: filter 300ms;
+  cursor: pointer;
+}
+
+.pass-gen .pass-gen__btn {
+  margin-top: 1rem;
+}
+
+.pass-gen__btn:hover,
+.pass-gen__btn:focus {
+  filter: brightness(120%);
+}
+
+.pass-gen__output {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.18rem;
+}
+
+.pass-gen__password {
+  background-color: var(--color-dark-gray-blue);
+  text-align: center;
+  width: 180px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-green);
+  border-radius: var(--radius-100);
+}

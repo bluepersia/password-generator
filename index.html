@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Karla:wght@800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Karla:wght@800&display=swap"
       rel="stylesheet"
     />
 
@@ -19,10 +19,50 @@
     <link rel="stylesheet" href="src/css/utilities.css" />
 
     <!-- Blocks-->
+    <link rel="stylesheet" href="src/css/blocks/pass-gen/pass-gen.css" />
+    <link rel="stylesheet" href="src/css/blocks/pass-gen/checkbox.css" />
+    <link rel="stylesheet" href="src/css/blocks/pass-gen/field-group.css" />
   </head>
 
   <body>
-    <h1>Hello World</h1>
-    <p>Some lorem ipsum</p>
+    <main class="pass-gen" id="pass-gen">
+      <header class="pass-gen__header">
+        <h1 class="pass-gen__title">
+          Generate a <br /><span class="pass-gen__highlight"
+            >random password</span
+          >
+        </h1>
+        <p class="pass-gen__desc">Never use an insecure password again.</p>
+        <form class="pass-gen__form" data-form>
+          <label class="checkbox">
+            <input type="checkbox" name="use-symbols" />
+            Use Symbols
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="use-numbers" />
+            Use Numbers
+          </label>
+          <div class="field-group">
+            <label for="password-length" class="field-group__label"
+              >Password Length:</label
+            >
+            <input
+              id="password-length"
+              type="number"
+              class="field-group__input"
+              name="password-length"
+              value="15"
+            />
+          </div>
+          <button class="pass-gen__btn">Generate passwords</button>
+        </form>
+      </header>
+      <ul class="pass-gen__output reset-list" data-output tabindex="-1">
+        <li class="pass-gen__password" data-password-1 aria-live="polite"></li>
+        <li class="pass-gen__password" data-password-2 aria-live="polite"></li>
+      </ul>
+    </main>
+
+    <script src="dist/scripts/index.js" type="module"></script>
   </body>
 </html>
