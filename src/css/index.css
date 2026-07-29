@@ -8,6 +8,15 @@
 
 body {
   font-family: var(--font-inter);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body > .pass-gen {
+  width: 100%;
+  max-width: 550px;
 }
 
 h1,

@@ -1,0 +1,5 @@
+.field-group__input {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 0.5em;
+}
